@@ -1,0 +1,10 @@
+policy,bus_time_red,bus_fare_red,train_time_red,train_fare_red,car_cost_inc,effort,sustainable_share_pct
+Baseline (no intervention),0.0,0.0,0.0,0.0,0.0,0.0,43.91275500944541
+Only bus travel-time reduction at bound,30.0,0.0,0.0,0.0,0.0,1.0,44.104880112040426
+Only bus fare reduction at bound,0.0,50.0,0.0,0.0,0.0,1.0,44.44121865402006
+Only suburban rail travel-time reduction at bound,0.0,0.0,20.0,0.0,0.0,1.0,44.70528246121824
+Only suburban rail fare reduction at bound,0.0,0.0,0.0,50.0,0.0,1.0,45.190759662569654
+Only car out-of-pocket cost increase at bound,0.0,0.0,0.0,0.0,50.0,1.0,46.23369532000934
+All levers at half their bound,15.0,25.0,10.0,25.0,25.0,2.5,46.576115051376036
+"Public transport levers at bound, no car pricing",30.0,50.0,20.0,50.0,0.0,4.0,46.644780706108854
+Optimised policy,30.0,50.0,20.0,50.0,50.0,5.0,48.987012473959204

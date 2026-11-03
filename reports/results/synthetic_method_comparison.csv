@@ -1,0 +1,4 @@
+method,mean_marginal_distance,max_marginal_distance,association_mad,discriminator_auc,records_needing_repair_pct,viol_children_leave_no_adult,viol_workers_exceed_household,viol_car_available_without_car,viol_twow_available_without_twow,viol_short_trip_without_walk_option,viol_distance_outside_observed_range,exact_copy_share_synthetic,exact_copy_share_holdout,median_dcr_synthetic,median_dcr_holdout,share_synthetic_closer_than_holdout_p5
+bootstrap,0.0062575022461814995,0.013766037735849057,0.04388797223973565,0.2977136266271215,0.72,7,29,0,0,0,0,0.9928,0.0,0.0,0.14285714285714285,1.0
+copula,0.02070296495956873,0.11964528301886793,0.07763279225271856,0.7466162464985995,31.26,116,74,579,463,331,0,0.0,0.0,0.1906356292517007,0.14285714285714285,0.0088
+cart,0.011176999101527408,0.05700377358490567,0.042491097963858554,0.4922118965233152,1.5,25,43,0,0,0,7,0.0038,0.0,0.14291028911564627,0.14285714285714285,0.092

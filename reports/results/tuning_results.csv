@@ -1,0 +1,7 @@
+model,search,configurations,best_cv_macro_f1,best_params,seconds
+MNL,grid,3,0.5594152342483671,"{""spec"": ""GC+CORE""}",5.4
+Logistic regression,grid,22,0.6223303630537854,"{""balanced"": true, ""estimator__clf__C"": 0.01}",3.9
+Decision tree,grid,640,0.6302712885835305,"{""balanced"": false, ""estimator__clf__criterion"": ""entropy"", ""estimator__clf__max_depth"": 8, ""estimator__clf__min_samples_leaf"": 1, ""estimator__clf__min_samples_split"": 20}",234.8
+Random forest,random,60,0.6212014104038402,"{""estimator__clf__n_estimators"": 200, ""estimator__clf__min_samples_split"": 10, ""estimator__clf__min_samples_leaf"": 8, ""estimator__clf__max_features"": 0.5, ""estimator__clf__max_depth"": 3, ""balanced"": false}",61.2
+XGBoost,random,60,0.6285151029739099,"{""estimator__clf__subsample"": 1.0, ""estimator__clf__reg_lambda"": 10.0, ""estimator__clf__reg_alpha"": 1.0, ""estimator__clf__n_estimators"": 600, ""estimator__clf__min_child_weight"": 3, ""estimator__clf__max_depth"": 4, ""estimator__clf__learning_rate"": 0.01, ""estimator__clf__colsample_bytree"": 1.0, ""balanced"": false}",104.5
+Nested logit,rule,5,,"{""spec"": ""GC+CORE"", ""nests"": ""SHARED{auto,bus,train}""}",

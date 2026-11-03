@@ -1,0 +1,237 @@
+{
+  "fast_mode": false,
+  "seed": 42,
+  "cv_seed": 2026,
+  "synth_seed": 7,
+  "audit": {
+    "n_time_inconsistent": 11,
+    "household_flags": {
+      "hh_size_not_adults_plus_children": 3,
+      "zero_adults": 1,
+      "workers_exceed_adults": 15,
+      "workers_exceed_hh_size": 3
+    }
+  },
+  "split": {
+    "train": 424,
+    "test": 107,
+    "train_counts": [
+      37,
+      113,
+      27,
+      105,
+      45,
+      97
+    ],
+    "test_counts": [
+      10,
+      29,
+      7,
+      26,
+      11,
+      24
+    ]
+  },
+  "mnl_spec": "GC+CORE",
+  "nest_structure": "SHARED{auto,bus,train}",
+  "mnl_fit": {
+    "log_likelihood": -358.4,
+    "null_log_likelihood": -518.983,
+    "rho_squared": 0.3094,
+    "adj_rho_squared": 0.2863,
+    "n_parameters": 12,
+    "n_obs": 424,
+    "AIC": 740.8,
+    "BIC": 789.4,
+    "converged": true
+  },
+  "nl_fit": {
+    "log_likelihood": -354.092,
+    "null_log_likelihood": -518.983,
+    "rho_squared": 0.3177,
+    "adj_rho_squared": 0.2927,
+    "n_parameters": 13,
+    "n_obs": 424,
+    "AIC": 734.18,
+    "BIC": 786.83,
+    "converged": true
+  },
+  "vot": {
+    "in_vehicle_time_INR_per_hour": 29.6,
+    "walk_time_INR_per_hour": 59.2
+  },
+  "selected_model": "MNL",
+  "selection": {
+    "ranking": [
+      "XGBoost",
+      "Decision tree",
+      "Logistic regression",
+      "Random forest",
+      "MNL",
+      "Nested logit"
+    ],
+    "shortlist_after_f1_and_ba": [
+      "Decision tree",
+      "XGBoost"
+    ],
+    "skipped": [
+      "XGBoost",
+      "Decision tree",
+      "Logistic regression",
+      "Random forest"
+    ],
+    "winner": "MNL",
+    "readiness": {
+      "MNL": true,
+      "Nested logit": true,
+      "Logistic regression": false,
+      "Decision tree": false,
+      "Random forest": false,
+      "XGBoost": false
+    }
+  },
+  "synthetic": {
+    "method": "cart",
+    "n": 5000,
+    "copy_limit": 0.01,
+    "table": {
+      "bootstrap": {
+        "mean_marginal_distance": 0.0062575022461814995,
+        "max_marginal_distance": 0.013766037735849057,
+        "association_mad": 0.04388797223973565,
+        "discriminator_auc": 0.2977136266271215,
+        "records_needing_repair_pct": 0.72,
+        "viol_children_leave_no_adult": 7,
+        "viol_workers_exceed_household": 29,
+        "viol_car_available_without_car": 0,
+        "viol_twow_available_without_twow": 0,
+        "viol_short_trip_without_walk_option": 0,
+        "viol_distance_outside_observed_range": 0,
+        "exact_copy_share_synthetic": 0.9928,
+        "exact_copy_share_holdout": 0.0,
+        "median_dcr_synthetic": 0.0,
+        "median_dcr_holdout": 0.14285714285714285,
+        "share_synthetic_closer_than_holdout_p5": 1.0
+      },
+      "copula": {
+        "mean_marginal_distance": 0.02070296495956873,
+        "max_marginal_distance": 0.11964528301886793,
+        "association_mad": 0.07763279225271856,
+        "discriminator_auc": 0.7466162464985995,
+        "records_needing_repair_pct": 31.26,
+        "viol_children_leave_no_adult": 116,
+        "viol_workers_exceed_household": 74,
+        "viol_car_available_without_car": 579,
+        "viol_twow_available_without_twow": 463,
+        "viol_short_trip_without_walk_option": 331,
+        "viol_distance_outside_observed_range": 0,
+        "exact_copy_share_synthetic": 0.0,
+        "exact_copy_share_holdout": 0.0,
+        "median_dcr_synthetic": 0.1906356292517007,
+        "median_dcr_holdout": 0.14285714285714285,
+        "share_synthetic_closer_than_holdout_p5": 0.0088
+      },
+      "cart": {
+        "mean_marginal_distance": 0.011176999101527408,
+        "max_marginal_distance": 0.05700377358490567,
+        "association_mad": 0.042491097963858554,
+        "discriminator_auc": 0.4922118965233152,
+        "records_needing_repair_pct": 1.5,
+        "viol_children_leave_no_adult": 25,
+        "viol_workers_exceed_household": 43,
+        "viol_car_available_without_car": 0,
+        "viol_twow_available_without_twow": 0,
+        "viol_short_trip_without_walk_option": 0,
+        "viol_distance_outside_observed_range": 7,
+        "exact_copy_share_synthetic": 0.0038,
+        "exact_copy_share_holdout": 0.0,
+        "median_dcr_synthetic": 0.14291028911564627,
+        "median_dcr_holdout": 0.14285714285714285,
+        "share_synthetic_closer_than_holdout_p5": 0.092
+      }
+    }
+  },
+  "baseline": {
+    "expected_sustainable_share_pct": 43.91275500944541,
+    "hard_sustainable_share_pct": 34.96,
+    "observed_train_sustainable_pct": 42.216981132075475
+  },
+  "no_change_max_abs_diff": 0.0,
+  "optimisation": {
+    "optimal_levers": {
+      "bus_time_red": 30.0,
+      "bus_fare_red": 50.0,
+      "train_time_red": 20.0,
+      "train_fare_red": 50.0,
+      "car_cost_inc": 50.0
+    },
+    "objective_sustainable_share_pct": 48.987012473959204,
+    "found_by": "grid search",
+    "grid": {
+      "step": 5.0,
+      "evaluations": 46585,
+      "seconds": 257.0,
+      "best_levers": {
+        "bus_time_red": 30.0,
+        "bus_fare_red": 50.0,
+        "train_time_red": 20.0,
+        "train_fare_red": 50.0,
+        "car_cost_inc": 50.0
+      },
+      "best_objective_pct": 48.987012473959204
+    },
+    "differential_evolution": {
+      "levers": {
+        "bus_time_red": 29.999998158844953,
+        "bus_fare_red": 49.99999842212107,
+        "train_time_red": 19.999995814571193,
+        "train_fare_red": 49.99999838281464,
+        "car_cost_inc": 49.99999908192749
+      },
+      "objective_pct": 48.98701221060996,
+      "evaluations": 25734,
+      "seconds": 137.1
+    },
+    "baseline_sustainable_pct": 43.91275500944541,
+    "improvement_pp": 5.074257464513792,
+    "hard_sustainable": {
+      "baseline_pct": 34.96,
+      "optimised_pct": 41.3
+    },
+    "verification": {
+      "recomputed_objective": 0.489870124739592,
+      "reported_objective": 0.489870124739592,
+      "abs_difference": 0.0,
+      "matches": true,
+      "constraint_problems": [],
+      "non_negative_times": true,
+      "non_negative_costs": true,
+      "availability_unchanged": true,
+      "probabilities_valid": true
+    },
+    "bounds": {
+      "bus_time_red": [
+        0.0,
+        30.0
+      ],
+      "bus_fare_red": [
+        0.0,
+        50.0
+      ],
+      "train_time_red": [
+        0.0,
+        20.0
+      ],
+      "train_fare_red": [
+        0.0,
+        50.0
+      ],
+      "car_cost_inc": [
+        0.0,
+        50.0
+      ]
+    },
+    "fast_evaluator": true
+  },
+  "runtime_minutes": 18.64
+}

@@ -1,0 +1,6 @@
+cost_column,exact_match_share,within_1_inr_share,max_abs_diff_inr
+TC_Car,0.906,1.0,1.0
+TC_2W,0.962,1.0,1.0
+TC_Auto,0.942,1.0,1.0
+TC_Bus,0.996,1.0,1.0
+TC_LocalTrain,1.0,1.0,0.0

@@ -1,0 +1,9 @@
+variable,documented_codes,observed_counts,undocumented_codes_in_data,documented_but_unused,consistent
+Age,"1=18-30, 2=30-55, 3=>55","1:33, 2:365, 3:133",[],[],True
+Education,"1=Graduation, 2=SSC/Diploma, 3=Below SSC","1:292, 2:182, 3:57",[],[],True
+Occup,"1=Unemployed, 2=Government employee, 3=Service, 4=Self-employed","1:3, 2:135, 3:234, 4:4, 5:155",[5],[],False
+Income,"1=<30,000, 2=30,000-80,000, 3=>80,000","1:213, 2:243, 3:75",[],[],True
+Dwelling,"1=Apartment, 2=Independent house, 3=Row house","1:186, 2:10, 3:144, 4:191",[4],[],False
+SAPT,"0=Not satisfied, 1=Satisfied","0:29, 1:502",[],[],True
+Trip_Purpose,"0=Non-work, 1=Work","1:106, 2:425",[2],[0],False
+Choice,"1=Walk, 2=Two-wheeler, 3=Auto-rickshaw, 4=Car, 5=Bus, 6=Suburban rail","1:47, 2:142, 3:34, 4:131, 5:56, 6:121",[],[],True

@@ -1,0 +1,209 @@
+{
+  "shape": [
+    531,
+    38
+  ],
+  "missing_values": 0,
+  "duplicate_rows": 0,
+  "duplicate_rows_ignoring_id": 0,
+  "id_unique": true,
+  "id_range": [
+    1,
+    654
+  ],
+  "duplicate_columns": [
+    [
+      "DL_TwoW",
+      "TwoW_AV"
+    ],
+    [
+      "DL_Car",
+      "Car_AV"
+    ]
+  ],
+  "constant_columns": [
+    "LocalTrain_AV"
+  ],
+  "availability": {
+    "chosen_alternative_unavailable": 0,
+    "availability_share": {
+      "walk": 0.482,
+      "twow": 0.729,
+      "auto": 0.667,
+      "car": 0.552,
+      "bus": 0.179,
+      "train": 1.0
+    },
+    "n_available_alternatives": {
+      "1": 8,
+      "2": 79,
+      "3": 166,
+      "4": 153,
+      "5": 110,
+      "6": 15
+    },
+    "single_alternative_records": 8,
+    "car_av_without_car": 0,
+    "twow_av_without_twow": 0,
+    "car_owned_but_unavailable": 60,
+    "twow_owned_but_unavailable": 47,
+    "walk_av_share_up_to_1.5km": 1.0,
+    "walk_av_share_above_3km": 0.293,
+    "max_walk_distance_chosen_km": 3.6
+  },
+  "household_flag_counts": {
+    "hh_size_not_adults_plus_children": 3,
+    "zero_adults": 1,
+    "workers_exceed_adults": 15,
+    "workers_exceed_hh_size": 3
+  },
+  "target_counts": {
+    "Walk": 47,
+    "Two-wheeler": 142,
+    "Auto-rickshaw": 34,
+    "Car": 131,
+    "Bus": 56,
+    "Suburban rail": 121
+  },
+  "los_rules": {
+    "time_rate_min_per_km": {
+      "walk": 15.0,
+      "twow": 2.4,
+      "auto": 3.0,
+      "car": 2.7273,
+      "bus": 3.5294,
+      "train": 1.7143
+    },
+    "implied_speed_kmh": {
+      "walk": 4.0,
+      "twow": 25.0,
+      "auto": 20.0,
+      "car": 22.0,
+      "bus": 17.0,
+      "train": 35.0
+    },
+    "car_rate_inr_per_km": 4.4482,
+    "twow_rate_inr_per_km": 1.6043,
+    "auto_fare": {
+      "minimum": 15.0,
+      "slope": 9.8682,
+      "intercept": -0.7673
+    },
+    "bus_fare_steps": [
+      [
+        3.05,
+        7.0
+      ],
+      [
+        3.5,
+        10.0
+      ],
+      [
+        4.5,
+        11.0
+      ],
+      [
+        5.0,
+        12.0
+      ],
+      [
+        5.45,
+        13.0
+      ],
+      [
+        6.45,
+        14.0
+      ],
+      [
+        7.55,
+        15.0
+      ],
+      [
+        8.6,
+        16.0
+      ],
+      [
+        9.45,
+        17.0
+      ],
+      [
+        9.95,
+        18.0
+      ],
+      [
+        10.45,
+        19.0
+      ],
+      [
+        11.55,
+        20.0
+      ],
+      [
+        12.45,
+        21.0
+      ],
+      [
+        13.45,
+        22.0
+      ],
+      [
+        14.35,
+        23.0
+      ],
+      [
+        15.1,
+        24.0
+      ],
+      [
+        15.6,
+        25.0
+      ],
+      [
+        16.45,
+        26.0
+      ],
+      [
+        17.45,
+        27.0
+      ],
+      [
+        18.45,
+        28.0
+      ],
+      [
+        19.75,
+        29.0
+      ],
+      [
+        20.75,
+        30.0
+      ],
+      [
+        21.75,
+        31.0
+      ],
+      [
+        "inf",
+        32.0
+      ]
+    ],
+    "train_fare_steps": [
+      [
+        19.75,
+        5.0
+      ],
+      [
+        39.15,
+        10.0
+      ],
+      [
+        68.35,
+        15.0
+      ],
+      [
+        "inf",
+        25.0
+      ]
+    ]
+  }
+}

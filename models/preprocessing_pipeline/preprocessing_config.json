@@ -1,0 +1,626 @@
+{
+  "dropped_columns": [
+    "DL_TwoW",
+    "DL_Car"
+  ],
+  "los_rules": {
+    "time_rate_min_per_km": {
+      "walk": 15.0,
+      "twow": 2.4,
+      "auto": 3.0,
+      "car": 2.7273,
+      "bus": 3.5294,
+      "train": 1.7143
+    },
+    "implied_speed_kmh": {
+      "walk": 4.0,
+      "twow": 25.0,
+      "auto": 20.0,
+      "car": 22.0,
+      "bus": 17.0,
+      "train": 35.0
+    },
+    "car_rate_inr_per_km": 4.4482,
+    "twow_rate_inr_per_km": 1.6043,
+    "auto_fare": {
+      "minimum": 15.0,
+      "slope": 9.8682,
+      "intercept": -0.7673
+    },
+    "bus_fare_steps": [
+      [
+        3.05,
+        7.0
+      ],
+      [
+        3.5,
+        10.0
+      ],
+      [
+        4.5,
+        11.0
+      ],
+      [
+        5.0,
+        12.0
+      ],
+      [
+        5.45,
+        13.0
+      ],
+      [
+        6.45,
+        14.0
+      ],
+      [
+        7.55,
+        15.0
+      ],
+      [
+        8.6,
+        16.0
+      ],
+      [
+        9.45,
+        17.0
+      ],
+      [
+        9.95,
+        18.0
+      ],
+      [
+        10.45,
+        19.0
+      ],
+      [
+        11.55,
+        20.0
+      ],
+      [
+        12.45,
+        21.0
+      ],
+      [
+        13.45,
+        22.0
+      ],
+      [
+        14.35,
+        23.0
+      ],
+      [
+        15.1,
+        24.0
+      ],
+      [
+        15.6,
+        25.0
+      ],
+      [
+        16.45,
+        26.0
+      ],
+      [
+        17.45,
+        27.0
+      ],
+      [
+        18.45,
+        28.0
+      ],
+      [
+        19.75,
+        29.0
+      ],
+      [
+        20.75,
+        30.0
+      ],
+      [
+        21.75,
+        31.0
+      ],
+      [
+        "inf",
+        32.0
+      ]
+    ],
+    "train_fare_steps": [
+      [
+        19.75,
+        5.0
+      ],
+      [
+        39.15,
+        10.0
+      ],
+      [
+        68.35,
+        15.0
+      ],
+      [
+        "inf",
+        25.0
+      ]
+    ]
+  },
+  "time_corrections": [
+    {
+      "ID": 179,
+      "column": "walk_time_min",
+      "original": 6.2,
+      "corrected": 7.5
+    },
+    {
+      "ID": 179,
+      "column": "TwoW_time_min",
+      "original": 1359.6,
+      "corrected": 1.2
+    },
+    {
+      "ID": 179,
+      "column": "auto_time_min",
+      "original": 1699.5,
+      "corrected": 1.5
+    },
+    {
+      "ID": 179,
+      "column": "car_time_min",
+      "original": 1545.0,
+      "corrected": 1.4
+    },
+    {
+      "ID": 179,
+      "column": "bus_time_min",
+      "original": 1999.4,
+      "corrected": 1.8
+    },
+    {
+      "ID": 179,
+      "column": "local_train_time_min",
+      "original": 971.1,
+      "corrected": 0.9
+    },
+    {
+      "ID": 273,
+      "column": "walk_time_min",
+      "original": 1.5,
+      "corrected": 114.0
+    },
+    {
+      "ID": 273,
+      "column": "TwoW_time_min",
+      "original": 0.3,
+      "corrected": 18.2
+    },
+    {
+      "ID": 273,
+      "column": "auto_time_min",
+      "original": 0.4,
+      "corrected": 22.8
+    },
+    {
+      "ID": 273,
+      "column": "car_time_min",
+      "original": 0.3,
+      "corrected": 20.7
+    },
+    {
+      "ID": 273,
+      "column": "bus_time_min",
+      "original": 0.5,
+      "corrected": 26.8
+    },
+    {
+      "ID": 273,
+      "column": "local_train_time_min",
+      "original": 0.3,
+      "corrected": 13.0
+    },
+    {
+      "ID": 275,
+      "column": "walk_time_min",
+      "original": 136.5,
+      "corrected": 114.0
+    },
+    {
+      "ID": 275,
+      "column": "TwoW_time_min",
+      "original": 21.8,
+      "corrected": 18.2
+    },
+    {
+      "ID": 275,
+      "column": "auto_time_min",
+      "original": 27.3,
+      "corrected": 22.8
+    },
+    {
+      "ID": 275,
+      "column": "car_time_min",
+      "original": 24.8,
+      "corrected": 20.7
+    },
+    {
+      "ID": 275,
+      "column": "bus_time_min",
+      "original": 32.1,
+      "corrected": 26.8
+    },
+    {
+      "ID": 275,
+      "column": "local_train_time_min",
+      "original": 15.6,
+      "corrected": 13.0
+    },
+    {
+      "ID": 278,
+      "column": "walk_time_min",
+      "original": 0.2,
+      "corrected": 13.5
+    },
+    {
+      "ID": 278,
+      "column": "TwoW_time_min",
+      "original": 0.0,
+      "corrected": 2.2
+    },
+    {
+      "ID": 278,
+      "column": "auto_time_min",
+      "original": 0.0,
+      "corrected": 2.7
+    },
+    {
+      "ID": 278,
+      "column": "car_time_min",
+      "original": 0.0,
+      "corrected": 2.5
+    },
+    {
+      "ID": 278,
+      "column": "bus_time_min",
+      "original": 0.1,
+      "corrected": 3.2
+    },
+    {
+      "ID": 278,
+      "column": "local_train_time_min",
+      "original": 0.0,
+      "corrected": 1.5
+    },
+    {
+      "ID": 283,
+      "column": "walk_time_min",
+      "original": 2.1,
+      "corrected": 154.5
+    },
+    {
+      "ID": 283,
+      "column": "TwoW_time_min",
+      "original": 0.3,
+      "corrected": 24.7
+    },
+    {
+      "ID": 283,
+      "column": "auto_time_min",
+      "original": 0.5,
+      "corrected": 30.9
+    },
+    {
+      "ID": 283,
+      "column": "car_time_min",
+      "original": 0.4,
+      "corrected": 28.1
+    },
+    {
+      "ID": 283,
+      "column": "bus_time_min",
+      "original": 0.7,
+      "corrected": 36.4
+    },
+    {
+      "ID": 283,
+      "column": "local_train_time_min",
+      "original": 0.3,
+      "corrected": 17.7
+    },
+    {
+      "ID": 326,
+      "column": "walk_time_min",
+      "original": 0.4,
+      "corrected": 31.5
+    },
+    {
+      "ID": 326,
+      "column": "TwoW_time_min",
+      "original": 0.1,
+      "corrected": 5.0
+    },
+    {
+      "ID": 326,
+      "column": "auto_time_min",
+      "original": 0.1,
+      "corrected": 6.3
+    },
+    {
+      "ID": 326,
+      "column": "car_time_min",
+      "original": 0.1,
+      "corrected": 5.7
+    },
+    {
+      "ID": 326,
+      "column": "bus_time_min",
+      "original": 0.1,
+      "corrected": 7.4
+    },
+    {
+      "ID": 326,
+      "column": "local_train_time_min",
+      "original": 0.1,
+      "corrected": 3.6
+    },
+    {
+      "ID": 403,
+      "column": "walk_time_min",
+      "original": 3255.2,
+      "corrected": 94.5
+    },
+    {
+      "ID": 403,
+      "column": "TwoW_time_min",
+      "original": 18.8,
+      "corrected": 15.1
+    },
+    {
+      "ID": 403,
+      "column": "auto_time_min",
+      "original": 651.0,
+      "corrected": 18.9
+    },
+    {
+      "ID": 403,
+      "column": "car_time_min",
+      "original": 591.9,
+      "corrected": 17.2
+    },
+    {
+      "ID": 403,
+      "column": "bus_time_min",
+      "original": 765.9,
+      "corrected": 22.2
+    },
+    {
+      "ID": 403,
+      "column": "local_train_time_min",
+      "original": 372.0,
+      "corrected": 10.8
+    },
+    {
+      "ID": 482,
+      "column": "walk_time_min",
+      "original": 9115.5,
+      "corrected": 469.5
+    },
+    {
+      "ID": 482,
+      "column": "TwoW_time_min",
+      "original": 1458.5,
+      "corrected": 75.1
+    },
+    {
+      "ID": 482,
+      "column": "auto_time_min",
+      "original": 1823.1,
+      "corrected": 93.9
+    },
+    {
+      "ID": 482,
+      "column": "car_time_min",
+      "original": 1657.4,
+      "corrected": 85.4
+    },
+    {
+      "ID": 482,
+      "column": "bus_time_min",
+      "original": 2144.8,
+      "corrected": 110.5
+    },
+    {
+      "ID": 482,
+      "column": "local_train_time_min",
+      "original": 1041.8,
+      "corrected": 53.7
+    },
+    {
+      "ID": 525,
+      "column": "walk_time_min",
+      "original": 3712.8,
+      "corrected": 1345.5
+    },
+    {
+      "ID": 525,
+      "column": "TwoW_time_min",
+      "original": 594.1,
+      "corrected": 215.3
+    },
+    {
+      "ID": 525,
+      "column": "auto_time_min",
+      "original": 742.6,
+      "corrected": 269.1
+    },
+    {
+      "ID": 525,
+      "column": "car_time_min",
+      "original": 675.1,
+      "corrected": 244.6
+    },
+    {
+      "ID": 525,
+      "column": "bus_time_min",
+      "original": 873.6,
+      "corrected": 316.6
+    },
+    {
+      "ID": 525,
+      "column": "local_train_time_min",
+      "original": 424.3,
+      "corrected": 153.8
+    },
+    {
+      "ID": 533,
+      "column": "walk_time_min",
+      "original": 3766.1,
+      "corrected": 316.5
+    },
+    {
+      "ID": 533,
+      "column": "TwoW_time_min",
+      "original": 602.6,
+      "corrected": 50.6
+    },
+    {
+      "ID": 533,
+      "column": "auto_time_min",
+      "original": 753.2,
+      "corrected": 63.3
+    },
+    {
+      "ID": 533,
+      "column": "car_time_min",
+      "original": 684.7,
+      "corrected": 57.5
+    },
+    {
+      "ID": 533,
+      "column": "bus_time_min",
+      "original": 886.1,
+      "corrected": 74.5
+    },
+    {
+      "ID": 533,
+      "column": "local_train_time_min",
+      "original": 430.4,
+      "corrected": 36.2
+    },
+    {
+      "ID": 560,
+      "column": "walk_time_min",
+      "original": 9080.5,
+      "corrected": 705.0
+    },
+    {
+      "ID": 560,
+      "column": "TwoW_time_min",
+      "original": 1452.9,
+      "corrected": 112.8
+    },
+    {
+      "ID": 560,
+      "column": "auto_time_min",
+      "original": 1816.1,
+      "corrected": 141.0
+    },
+    {
+      "ID": 560,
+      "column": "car_time_min",
+      "original": 1651.0,
+      "corrected": 128.2
+    },
+    {
+      "ID": 560,
+      "column": "bus_time_min",
+      "original": 2136.6,
+      "corrected": 165.9
+    },
+    {
+      "ID": 560,
+      "column": "local_train_time_min",
+      "original": 1037.8,
+      "corrected": 80.6
+    }
+  ],
+  "categorical_features": [
+    "Trip_Purpose",
+    "Income",
+    "Age",
+    "Education",
+    "occ_group",
+    "Dwelling",
+    "Gender",
+    "ParkingSpace",
+    "Area_Type",
+    "SAPT",
+    "veh_own_cat"
+  ],
+  "numeric_features": [
+    "Distance_km",
+    "log_distance",
+    "walk_time_min",
+    "TwoW_time_min",
+    "auto_time_min",
+    "car_time_min",
+    "bus_time_min",
+    "local_train_time_min",
+    "TC_2W",
+    "TC_Auto",
+    "TC_Car",
+    "TC_Bus",
+    "TC_LocalTrain",
+    "HH_Size",
+    "Children",
+    "Working_Adults",
+    "workers_share",
+    "has_children",
+    "Car_Ownership",
+    "TwoW_Ownership",
+    "private_av",
+    "Walk_AV",
+    "TwoW_AV",
+    "Auto_AV",
+    "Car_AV",
+    "Bus_AV"
+  ],
+  "raw_predictors": [
+    "Distance_km",
+    "Trip_Purpose",
+    "Income",
+    "Gender",
+    "Age",
+    "Education",
+    "Occup",
+    "ParkingSpace",
+    "Area_Type",
+    "Dwelling",
+    "HH_Size",
+    "Adults",
+    "Children",
+    "Working_Adults",
+    "SAPT",
+    "Car_Ownership",
+    "TwoW_Ownership",
+    "walk_time_min",
+    "TwoW_time_min",
+    "auto_time_min",
+    "car_time_min",
+    "bus_time_min",
+    "local_train_time_min",
+    "TC_2W",
+    "TC_Auto",
+    "TC_Car",
+    "TC_Bus",
+    "TC_LocalTrain",
+    "Walk_AV",
+    "TwoW_AV",
+    "Auto_AV",
+    "Car_AV",
+    "Bus_AV",
+    "LocalTrain_AV"
+  ],
+  "rare_occupation_codes_pooled": [
+    1,
+    4
+  ]
+}

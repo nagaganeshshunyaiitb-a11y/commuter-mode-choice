@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+reports/report_builder/node_modules/
+reports/report_builder/package-lock.json
+reports/report_builder/report_data.json

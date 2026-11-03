@@ -1,0 +1,22 @@
+variable,metric,distance
+Income,total variation distance,0.008667924528301896
+Age,total variation distance,0.011120754716981145
+Education,total variation distance,0.0051283018867924884
+Occup,total variation distance,0.009347169811320747
+Gender,total variation distance,0.0007396226415094138
+Area_Type,total variation distance,0.0036754716981132196
+Dwelling,total variation distance,0.011800000000000015
+HH_Size,total variation distance,0.0070150943396226455
+Children,total variation distance,0.015067924528301881
+Working_Adults,total variation distance,0.007045283018867903
+Car_Ownership,total variation distance,0.008347169811320755
+TwoW_Ownership,total variation distance,0.0032867924528301707
+ParkingSpace,total variation distance,0.002535849056603756
+Car_AV,total variation distance,0.006954716981132092
+TwoW_AV,total variation distance,0.00037735849056602655
+Trip_Purpose,total variation distance,0.010486792452830213
+SAPT,total variation distance,0.00175471698113212
+Distance_km,KS statistic,0.05700377358490567
+Walk_AV,total variation distance,0.012992452830188683
+Auto_AV,total variation distance,0.005981132075471685
+Bus_AV,total variation distance,0.04538867924528302

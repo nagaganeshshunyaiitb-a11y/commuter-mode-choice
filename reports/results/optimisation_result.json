@@ -1,0 +1,76 @@
+{
+  "optimal_levers": {
+    "bus_time_red": 30.0,
+    "bus_fare_red": 50.0,
+    "train_time_red": 20.0,
+    "train_fare_red": 50.0,
+    "car_cost_inc": 50.0
+  },
+  "objective_sustainable_share_pct": 48.987012473959204,
+  "found_by": "grid search",
+  "grid": {
+    "step": 5.0,
+    "evaluations": 46585,
+    "seconds": 257.0,
+    "best_levers": {
+      "bus_time_red": 30.0,
+      "bus_fare_red": 50.0,
+      "train_time_red": 20.0,
+      "train_fare_red": 50.0,
+      "car_cost_inc": 50.0
+    },
+    "best_objective_pct": 48.987012473959204
+  },
+  "differential_evolution": {
+    "levers": {
+      "bus_time_red": 29.999998158844953,
+      "bus_fare_red": 49.99999842212107,
+      "train_time_red": 19.999995814571193,
+      "train_fare_red": 49.99999838281464,
+      "car_cost_inc": 49.99999908192749
+    },
+    "objective_pct": 48.98701221060996,
+    "evaluations": 25734,
+    "seconds": 137.1
+  },
+  "baseline_sustainable_pct": 43.91275500944541,
+  "improvement_pp": 5.074257464513792,
+  "hard_sustainable": {
+    "baseline_pct": 34.96,
+    "optimised_pct": 41.3
+  },
+  "verification": {
+    "recomputed_objective": 0.489870124739592,
+    "reported_objective": 0.489870124739592,
+    "abs_difference": 0.0,
+    "matches": true,
+    "constraint_problems": [],
+    "non_negative_times": true,
+    "non_negative_costs": true,
+    "availability_unchanged": true,
+    "probabilities_valid": true
+  },
+  "bounds": {
+    "bus_time_red": [
+      0.0,
+      30.0
+    ],
+    "bus_fare_red": [
+      0.0,
+      50.0
+    ],
+    "train_time_red": [
+      0.0,
+      20.0
+    ],
+    "train_fare_red": [
+      0.0,
+      50.0
+    ],
+    "car_cost_inc": [
+      0.0,
+      50.0
+    ]
+  },
+  "fast_evaluator": true
+}

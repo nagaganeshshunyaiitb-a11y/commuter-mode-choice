@@ -1,0 +1,29 @@
+{
+  "ranking": [
+    "XGBoost",
+    "Decision tree",
+    "Logistic regression",
+    "Random forest",
+    "MNL",
+    "Nested logit"
+  ],
+  "shortlist_after_f1_and_ba": [
+    "Decision tree",
+    "XGBoost"
+  ],
+  "skipped": [
+    "XGBoost",
+    "Decision tree",
+    "Logistic regression",
+    "Random forest"
+  ],
+  "winner": "MNL",
+  "readiness": {
+    "MNL": true,
+    "Nested logit": true,
+    "Logistic regression": false,
+    "Decision tree": false,
+    "Random forest": false,
+    "XGBoost": false
+  }
+}

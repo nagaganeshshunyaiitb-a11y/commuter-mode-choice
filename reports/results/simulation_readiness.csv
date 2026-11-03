@@ -1,0 +1,31 @@
+lever,mode,mean_change_pp,share_responding,share_wrong_direction,passes,model
+bus time,bus,1.8252289181141832,1.0,0.0,True,MNL
+bus fare,bus,2.3776940830131243,1.0,0.0,True,MNL
+rail time,train,0.8725528299997773,0.9858490566037735,0.0,True,MNL
+rail fare,train,0.5930629598131562,0.9858490566037735,0.0,True,MNL
+car cost,car,-3.804064507617326,0.9957446808510638,0.0,True,MNL
+bus time,bus,1.9206305006383626,1.0,0.0,True,Nested logit
+bus fare,bus,2.2135541057774244,1.0,0.0,True,Nested logit
+rail time,train,0.8181648635324335,0.9811320754716981,0.0,True,Nested logit
+rail fare,train,0.5047211033483096,0.9811320754716981,0.0,True,Nested logit
+car cost,car,-3.327822720626631,0.9957446808510638,0.0,True,Nested logit
+bus time,bus,-0.05910765950410843,1.0,0.8472222222222222,False,Logistic regression
+bus fare,bus,-0.30012391794080806,1.0,0.8472222222222222,False,Logistic regression
+rail time,train,-0.31403872372220315,0.9834905660377359,0.9858490566037735,False,Logistic regression
+rail fare,train,0.026603071601434835,0.9811320754716981,0.46462264150943394,False,Logistic regression
+car cost,car,-0.12710131106175085,0.9957446808510638,0.46808510638297873,False,Logistic regression
+bus time,bus,-1.117711902678143,0.08333333333333333,0.08333333333333333,False,Decision tree
+bus fare,bus,0.0,0.0,0.0,False,Decision tree
+rail time,train,0.0,0.0,0.0,False,Decision tree
+rail fare,train,0.0,0.0,0.0,False,Decision tree
+car cost,car,-1.0724793989997765,0.03404255319148936,0.00851063829787234,True,Decision tree
+bus time,bus,-0.21461914616827055,0.4305555555555556,0.3611111111111111,False,Random forest
+bus fare,bus,-0.07675939812855574,0.3055555555555556,0.19444444444444445,False,Random forest
+rail time,train,-0.2766055888426519,0.45990566037735847,0.4386792452830189,False,Random forest
+rail fare,train,0.0,0.0,0.0,False,Random forest
+car cost,car,-0.15131215491111388,0.26382978723404255,0.08085106382978724,False,Random forest
+bus time,bus,0.0,0.0,0.0,False,XGBoost
+bus fare,bus,0.0,0.0,0.0,False,XGBoost
+rail time,train,0.0,0.0,0.0,False,XGBoost
+rail fare,train,0.0,0.0,0.0,False,XGBoost
+car cost,car,0.0,0.0,0.0,False,XGBoost

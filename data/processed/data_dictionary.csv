@@ -1,0 +1,39 @@
+variable,type,description,documented_coding,observed_values,status,audit_note,treatment
+ID,identifier,Respondent identifier (not contiguous: 531 records with IDs between 1 and 654).,not in coding document,"min 1, median 330, max 654",OK,,Kept as is.
+Distance_km,continuous,Trip distance in km (one decimal).,not in coding document,"min 0.1, median 3.8, max 89.7",OK,,Kept as is.
+Trip_Purpose,binary,Trip purpose.,"0=Non-work, 1=Work","1:106, 2:425",DISCREPANCY,Document says 0/1; data contain 1/2. Cross-tabs suggest 2 = work (all 18-30 year olds and 94% of occupation code 3 report 2) but this is not confirmed.,Kept as code 1 / code 2 (neutral labels). Not remapped.
+Income,ordinal,Monthly household income band (INR).,"1=<30,000, 2=30,000-80,000, 3=>80,000","1:213, 2:243, 3:75",OK,Observed codes match the document.,Kept as is.
+Gender,binary,Gender of respondent.,not in coding document,"0:16, 1:515",UNDOCUMENTED,"Coding not given. 0: 16 records, 1: 515 records.",Kept as binary code; too few code-0 records to estimate a gender effect in the choice models.
+Age,ordinal,Age band (years).,"1=18-30, 2=30-55, 3=>55","1:33, 2:365, 3:133",OK,Observed codes match the document.,Kept as is.
+Education,ordinal,Highest education level.,"1=Graduation, 2=SSC/Diploma, 3=Below SSC","1:292, 2:182, 3:57",OK,Observed codes match the document.,Kept as is.
+Occup,nominal,Occupation.,"1=Unemployed, 2=Government employee, 3=Service, 4=Self-employed","1:3, 2:135, 3:234, 4:4, 5:155",DISCREPANCY,"Document lists codes 1-4; data contain 1-5 (code 5 = 155 records, undocumented). Code 2 ('Government employee') is 64% aged >55 with 53% purpose-1 trips and code 1 ('Unemployed') only makes purpose-2 trips, so the document's labels may not apply.",Kept as nominal codes; codes 1 and 4 (3 and 4 records) pooled as 'rare' for modelling.
+ParkingSpace,binary,Parking space indicator.,not in coding document,"0:348, 1:183",UNDOCUMENTED,Binary 0/1; whether it refers to home or destination parking is not stated.,Kept as binary code.
+walk_time_min,continuous,Walking time (min).,not in coding document,"min 0.2, median 54.3, max 9115.5",DERIVED + ERRORS,"Computed, not observed: equals a fixed rate x Distance_km to rounding in 520/531 records. 11 records are inconsistent with their distance (costs agree with distance).",11 records recomputed from distance (logged).
+TwoW_time_min,continuous,Two-wheeler travel time (min).,not in coding document,"min 0, median 8.9, max 1458.5",DERIVED + ERRORS,"Computed, not observed: equals a fixed rate x Distance_km to rounding in 520/531 records. 11 records are inconsistent with their distance (costs agree with distance).",11 records recomputed from distance (logged).
+auto_time_min,continuous,Auto-rickshaw travel time (min).,not in coding document,"min 0, median 11.1, max 1823.1",DERIVED + ERRORS,"Computed, not observed: equals a fixed rate x Distance_km to rounding in 520/531 records. 11 records are inconsistent with their distance (costs agree with distance).",11 records recomputed from distance (logged).
+car_time_min,continuous,Car travel time (min).,not in coding document,"min 0, median 10.1, max 1657.4",DERIVED + ERRORS,"Computed, not observed: equals a fixed rate x Distance_km to rounding in 520/531 records. 11 records are inconsistent with their distance (costs agree with distance).",11 records recomputed from distance (logged).
+local_train_time_min,continuous,Suburban rail travel time (min).,not in coding document,"min 0, median 6.3, max 1041.8",DERIVED + ERRORS,"Computed, not observed: equals a fixed rate x Distance_km to rounding in 520/531 records. 11 records are inconsistent with their distance (costs agree with distance).",11 records recomputed from distance (logged).
+bus_time_min,continuous,Bus travel time (min).,not in coding document,"min 0.1, median 13.1, max 2144.8",DERIVED + ERRORS,"Computed, not observed: equals a fixed rate x Distance_km to rounding in 520/531 records. 11 records are inconsistent with their distance (costs agree with distance).",11 records recomputed from distance (logged).
+Area_Type,binary,Area type of residence.,not in coding document,"0:405, 1:126",UNDOCUMENTED,Binary 0/1; meaning not stated.,Kept as binary code.
+Dwelling,nominal,Dwelling type.,"1=Apartment, 2=Independent house, 3=Row house","1:186, 2:10, 3:144, 4:191",DISCREPANCY,"Document lists codes 1-3; data contain 1-4 (code 4 = 191 records, undocumented). Code 2 has only 10 records.","Kept as nominal codes, no relabelling."
+HH_Size,count,Household size (persons).,not in coding document,"1:5, 2:38, 3:105, 4:175, 5:96, 6:72, 7:19, 8:15, 9:2, 10:2, 12:2",OK,,Kept as is.
+Adults,count,Number of adults in household.,not in coding document,"0:1, 1:13, 2:172, 3:119, 4:149, 5:45, 6:23, 7:5, 8:3, 9:1",CHECK,One record has Adults = 0; 15 records have Working_Adults > Adults; 3 records have HH_Size != Adults + Children.,"Flagged, not altered."
+Children,count,Number of children in household.,not in coding document,"0:219, 1:125, 2:133, 3:29, 4:17, 5:5, 6:2, 7:1",OK,,Kept as is.
+Working_Adults,count,Number of working members in household.,not in coding document,"1:298, 2:153, 3:58, 4:16, 5:5, 6:1",CHECK,"15 records exceed Adults; 3 records (IDs 288, 486, 533) exceed HH_Size.","Flagged, not altered; capped at HH_Size only inside the workers-share feature."
+SAPT,binary,Satisfaction with public transport.,"0=Not satisfied, 1=Satisfied","0:29, 1:502",OK (imbalanced),"0: 29 records, 1: 502 records.",Kept as binary.
+Choice,target,Chosen mode.,"1=Walk, 2=Two-wheeler, 3=Auto-rickshaw, 4=Car, 5=Bus, 6=Suburban rail","1:47, 2:142, 3:34, 4:131, 5:56, 6:121",OK,Matches document codes 1-6.,Target.
+DL_TwoW,binary,Two-wheeler driving licence.,not in coding document,"0:144, 1:387",DUPLICATE,Identical to TwoW_AV in all 531 records.,Dropped (duplicate column).
+DL_Car,binary,Car driving licence.,not in coding document,"0:238, 1:293",DUPLICATE,Identical to Car_AV in all 531 records.,Dropped (duplicate column).
+Car_AV,availability,Car available for the trip.,not in coding document,"0:238, 1:293",OK,,Kept as is.
+TwoW_AV,availability,Two-wheeler available for the trip.,not in coding document,"0:144, 1:387",OK,,Kept as is.
+Walk_AV,availability,Walking available for the trip.,not in coding document,"0:275, 1:256",OK,,Kept as is.
+Auto_AV,availability,Auto-rickshaw available for the trip.,not in coding document,"0:177, 1:354",OK,,Kept as is.
+Bus_AV,availability,Bus available for the trip.,not in coding document,"0:436, 1:95",OK,,Kept as is.
+LocalTrain_AV,availability,Suburban rail available for the trip.,not in coding document,1:531,CONSTANT,Equal to 1 in all records.,Kept to define the choice set; unusable as a predictor; no availability effect can be learned.
+Car_Ownership,count,Number of cars owned by household.,not in coding document,"0:178, 1:311, 2:33, 3:8, 4:1",OK,,Kept as is.
+TwoW_Ownership,count,Number of two-wheelers owned by household.,not in coding document,"0:97, 1:348, 2:75, 3:7, 4:3, 5:1",OK,,Kept as is.
+TC_Car,continuous,Car travel cost (INR).,not in coding document,"min 0, median 17, max 399",DERIVED,Computed from Distance_km with a per-km rate or a stepped fare table.,Kept as is.
+TC_2W,continuous,Two-wheeler travel cost (INR).,not in coding document,"min 0, median 6, max 144",DERIVED,Computed from Distance_km with a per-km rate or a stepped fare table.,Kept as is.
+TC_Auto,continuous,Auto-rickshaw fare (INR).,not in coding document,"min 15, median 37, max 885",DERIVED,Computed from Distance_km with a per-km rate or a stepped fare table.,Kept as is.
+TC_Bus,continuous,Bus fare (INR).,not in coding document,"min 7, median 11, max 32",DERIVED,Computed from Distance_km with a per-km rate or a stepped fare table.,Kept as is.
+TC_LocalTrain,continuous,Suburban rail fare (INR).,not in coding document,"5:503, 10:26, 15:1, 25:1",DERIVED,Computed from Distance_km with a per-km rate or a stepped fare table.,Kept as is.

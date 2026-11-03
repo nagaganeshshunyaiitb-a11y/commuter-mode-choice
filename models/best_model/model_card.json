@@ -1,0 +1,220 @@
+{
+  "selected_model": "MNL",
+  "trained_on": "training partition only (80%, stratified, seed 42); never refitted on test or synthetic data",
+  "n_train": 424,
+  "n_test": 107,
+  "seed": 42,
+  "hyperparameters": {
+    "spec": "GC+CORE"
+  },
+  "cv_summary": {
+    "accuracy_mean": 0.6283025210084033,
+    "macro_precision_mean": 0.6706309854100995,
+    "macro_recall_mean": 0.570125772269937,
+    "macro_f1_mean": 0.562110958211823,
+    "weighted_f1_mean": 0.6030555577612259,
+    "balanced_accuracy_mean": 0.570125772269937,
+    "log_loss_mean": 0.9151382310900996,
+    "brier_mean": 0.48693130863974154,
+    "ece_mean": 0.09844176835599484,
+    "share_mae_pp_mean": 1.6067771097710573,
+    "accuracy_sd": 0.0390725955871106,
+    "macro_precision_sd": 0.0834901389884943,
+    "macro_recall_sd": 0.042633881676179715,
+    "macro_f1_sd": 0.05034367073892474,
+    "weighted_f1_sd": 0.04096532771581917,
+    "balanced_accuracy_sd": 0.042633881676179715,
+    "log_loss_sd": 0.12792398419949202,
+    "brier_sd": 0.03645111978184118,
+    "ece_sd": 0.02464686862581884,
+    "share_mae_pp_sd": 0.6965687676626007,
+    "accuracy_se": 0.00781451911742212,
+    "macro_precision_se": 0.016698027797698863,
+    "macro_recall_se": 0.008526776335235943,
+    "macro_f1_se": 0.010068734147784949,
+    "weighted_f1_se": 0.008193065543163834,
+    "balanced_accuracy_se": 0.008526776335235943,
+    "log_loss_se": 0.025584796839898404,
+    "brier_se": 0.007290223956368236,
+    "ece_se": 0.004929373725163768,
+    "share_mae_pp_se": 0.13931375353252012
+  },
+  "test_metrics": {
+    "accuracy": 0.5233644859813084,
+    "macro_precision": 0.5295542542253069,
+    "macro_recall": 0.4605673541018369,
+    "macro_f1": 0.450850918675729,
+    "weighted_f1": 0.5036694323491532,
+    "balanced_accuracy": 0.4605673541018369,
+    "log_loss": 0.9488909967279742,
+    "brier": 0.5534491849656589,
+    "ece": 0.10171900203694752,
+    "share_mae_pp": 1.1646003543021077
+  },
+  "selection_log": {
+    "ranking": [
+      "XGBoost",
+      "Decision tree",
+      "Logistic regression",
+      "Random forest",
+      "MNL",
+      "Nested logit"
+    ],
+    "shortlist_after_f1_and_ba": [
+      "Decision tree",
+      "XGBoost"
+    ],
+    "skipped": [
+      "XGBoost",
+      "Decision tree",
+      "Logistic regression",
+      "Random forest"
+    ],
+    "winner": "MNL",
+    "readiness": {
+      "MNL": true,
+      "Nested logit": true,
+      "Logistic regression": false,
+      "Decision tree": false,
+      "Random forest": false,
+      "XGBoost": false
+    }
+  },
+  "classes": {
+    "0": "Walk",
+    "1": "Two-wheeler",
+    "2": "Auto-rickshaw",
+    "3": "Car",
+    "4": "Bus",
+    "5": "Suburban rail"
+  },
+  "versions": {
+    "python": "3.13.15",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1"
+  },
+  "utility_specification": {
+    "ASC_walk": {
+      "walk": "one"
+    },
+    "ASC_twow": {
+      "twow": "one"
+    },
+    "ASC_auto": {
+      "auto": "one"
+    },
+    "ASC_car": {
+      "car": "one"
+    },
+    "ASC_bus": {
+      "bus": "one"
+    },
+    "B_time": {
+      "walk": "walk_time_weighted",
+      "twow": "TwoW_time_min",
+      "auto": "auto_time_min",
+      "car": "car_time_min",
+      "bus": "bus_time_min",
+      "train": "local_train_time_min"
+    },
+    "B_cost": {
+      "twow": "TC_2W",
+      "auto": "TC_Auto",
+      "car": "TC_Car",
+      "bus": "TC_Bus",
+      "train": "TC_LocalTrain"
+    },
+    "B_car_inc2": {
+      "car": "inc2"
+    },
+    "B_car_inc3": {
+      "car": "inc3"
+    },
+    "B_car_owned": {
+      "car": "Car_Ownership"
+    },
+    "B_walk_purp1": {
+      "walk": "purp1"
+    },
+    "B_bus_purp1": {
+      "bus": "purp1"
+    }
+  },
+  "walk_time_weight": 2.0,
+  "estimates": {
+    "ASC_walk": {
+      "estimate": 2.048247,
+      "std_error": 0.42187,
+      "t_stat": 4.855156,
+      "p_value": 1e-06
+    },
+    "ASC_twow": {
+      "estimate": 1.488669,
+      "std_error": 0.193356,
+      "t_stat": 7.699129,
+      "p_value": 0.0
+    },
+    "ASC_auto": {
+      "estimate": 1.719588,
+      "std_error": 0.361662,
+      "t_stat": 4.754677,
+      "p_value": 2e-06
+    },
+    "ASC_car": {
+      "estimate": -0.140185,
+      "std_error": 0.743349,
+      "t_stat": -0.188585,
+      "p_value": 0.850418
+    },
+    "ASC_bus": {
+      "estimate": 2.763882,
+      "std_error": 0.3527,
+      "t_stat": 7.836351,
+      "p_value": 0.0
+    },
+    "B_time": {
+      "estimate": -0.024499,
+      "std_error": 0.005674,
+      "t_stat": -4.317699,
+      "p_value": 1.6e-05
+    },
+    "B_cost": {
+      "estimate": -0.049657,
+      "std_error": 0.007214,
+      "t_stat": -6.883616,
+      "p_value": 0.0
+    },
+    "B_car_inc2": {
+      "estimate": 2.086035,
+      "std_error": 0.561591,
+      "t_stat": 3.714512,
+      "p_value": 0.000204
+    },
+    "B_car_inc3": {
+      "estimate": 2.443653,
+      "std_error": 0.609671,
+      "t_stat": 4.008149,
+      "p_value": 6.1e-05
+    },
+    "B_car_owned": {
+      "estimate": 0.866497,
+      "std_error": 0.408076,
+      "t_stat": 2.12337,
+      "p_value": 0.033723
+    },
+    "B_walk_purp1": {
+      "estimate": 1.055584,
+      "std_error": 0.436096,
+      "t_stat": 2.420531,
+      "p_value": 0.015498
+    },
+    "B_bus_purp1": {
+      "estimate": 2.279612,
+      "std_error": 1.107682,
+      "t_stat": 2.058002,
+      "p_value": 0.03959
+    }
+  }
+}

@@ -1,0 +1,6 @@
+specification,behavioural_candidate,signs_ok,log_likelihood,null_log_likelihood,rho_squared,adj_rho_squared,n_parameters,n_obs,AIC,BIC,converged,in_vehicle_time_INR_per_hour,walk_time_INR_per_hour
+GC,True,True,-377.696,-518.983,0.2722,0.2587,7,424,769.39,797.74,True,27.9,55.9
+GC+CORE,True,True,-358.4,-518.983,0.3094,0.2863,12,424,740.8,789.4,True,29.6,59.2
+GC+SOCIO,True,True,-356.291,-518.983,0.3135,0.2769,19,424,750.58,827.53,True,28.6,57.2
+FREE,False,False,-376.667,-518.983,0.2742,0.2588,8,424,769.33,801.73,True,-16.2,45.0
+FREE+SOCIO,False,False,-354.829,-518.983,0.3163,0.2778,20,424,749.66,830.65,True,-21.6,44.6

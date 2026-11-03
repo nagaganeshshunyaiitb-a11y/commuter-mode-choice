@@ -1,0 +1,6 @@
+structure,log_likelihood,lambdas,lambda_se,lambda_at_bound,p_lambda_below_1,LR_vs_MNL,LR_p_value,usable
+"PT{bus,train}",-350.959,{'bus_train': np.float64(0.05)},[0.15],[True],[0.0],14.883,0.0001,False
+"PT{bus,train} + PRIVATE{car,twow}",-350.959,"{'bus_train': np.float64(0.05), 'car_twow': np.float64(1.0)}","[0.151, 0.155]","[True, True]","[0.0, 0.5]",14.883,0.0006,False
+"SHARED{auto,bus,train}",-354.092,{'auto_bus_train': np.float64(0.537)},[0.119],[False],[0.0001],8.617,0.0033,True
+"SHARED{auto,bus,train} + PRIVATE{car,twow}",-354.092,"{'auto_bus_train': np.float64(0.537), 'car_twow': np.float64(1.0)}","[0.13, 0.184]","[False, True]","[0.0002, 0.5]",8.617,0.0135,False
+"MOTORISED{twow,auto,car,bus,train}",-358.4,{'twow_auto_car_bus_train': np.float64(1.0)},[0.265],[True],[0.5],-0.0,1.0,False
